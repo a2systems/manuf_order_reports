@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data> 
+
+	<template id="manuf_report_delivery" inherit_id="stock.report_picking">
+	  <xpath expr="//h1[@t-field='o.name']" position="after">
+	        <div class="row mt48 mb32" t-if="o.source_bom_id">
+                       <div t-if="o.source_bom_id" class="col-auto" name="div_source_bom_id">
+                            <strong>LdM Origen:</strong>
+                            <p t-field="o.source_bom_id.display_name"/>
+                       </div>
+                        <div class="col-auto" name="div_source_product_id">
+                             <strong>Producto Origen:</strong>
+                             <p t-field="o.source_product_id.display_name"/>
+                        </div>
+		</div>
+		<br />
+          </xpath>
+       </template>
+
+	<template id="manuf_report_delivery_slip" inherit_id="stock.report_delivery_document">
+	  <xpath expr="//h2" position="after">
+	        <div class="row mt48 mb32" t-if="o.source_bom_id">
+                       <div t-if="o.source_bom_id" class="col-auto" name="div_source_bom_id">
+                            <strong>LdM Origen:</strong>
+                            <p t-field="o.source_bom_id.display_name"/>
+                       </div>
+                        <div class="col-auto" name="div_source_product_id">
+                             <strong>Producto Origen:</strong>
+                             <p t-field="o.source_product_id.display_name"/>
+                        </div>
+		</div>
+		<br />
+          </xpath>
+       </template>
+
+
+</data>
+</odoo>
