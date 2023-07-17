@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="manuf_order_report_stock_picking_form" model="ir.ui.view">
+	<field name="name">manuf.order.report.stock.picking.form</field>
+	<field name="model">stock.picking</field>
+	<field name="inherit_id" ref="stock.view_picking_form"></field>
+	<field name="arch" type="xml">
+		<field name="origin" position="after">
+			<field name="source_bom_id" />
+			<field name="source_product_id" />
+		</field>
+	</field>
+    </record>
+
+</odoo>

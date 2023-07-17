@@ -6,5 +6,6 @@
     "category": "Manufacturing",
     "data": [
         'report_template.xml',
+        'manuf_view.xml',
     ],
 }
