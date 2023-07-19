@@ -14,4 +14,16 @@
 	</field>
     </record>
 
+    <record id="manuf_order_report_stock_picking_tree" model="ir.ui.view">
+	<field name="name">manuf.order.report.stock.picking.tree</field>
+	<field name="model">stock.picking</field>
+	<field name="inherit_id" ref="stock.vpicktree"></field>
+	<field name="arch" type="xml">
+		<field name="origin" position="after">
+			<field name="source_bom_id" optional="hide"/>
+			<field name="source_product_id" optional="hide"/>
+		</field>
+	</field>
+    </record>
+
 </odoo>
